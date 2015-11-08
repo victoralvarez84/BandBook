@@ -1,0 +1,422 @@
+@import "../../node_modules/bootstrap/less/bootstrap";
+@fa-font-path: "fonts";
+@import "../../node_modules/font-awesome/less/font-awesome";
+@footer-height: 30px;
+
+
+
+body {
+  padding-top: 50px;
+  margin-bottom: @footer-height;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar-header{
+  background-color:rgb(33, 173, 193);
+}
+
+.navbar{
+  background-color: rgb(41, 40, 40);
+  }
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: @footer-height;
+  line-height: @footer-height;
+  background-color: rgb(33, 173, 193);
+  color: white;
+  p {
+    margin: 0 auto;
+  }
+}
+
+.inline {
+  display: inline-flex;
+  padding-top: 30px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+.well {
+  font-size: 22px;
+  padding-left: 20px;
+  p {
+    margin: 10px;
+  }
+}
+
+/* centered columns styles */
+
+.row-centered {
+  text-align: center;
+}
+
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* reset the text-align */
+  text-align: left;
+  /* inline-block space fix */
+  margin-right: -4px;
+}
+
+.centerBlock {
+  display: table;
+  margin: 0 auto;
+}
+
+.content {
+  width: 50%;
+  margin-left: 25%;
+  align-content: flex-end;
+}
+
+.text-center img{
+  border-radius: 50%;
+  width: 200px;
+  height:200px;
+}
+
+
+//Search page//
+
+.textWhereSearch{
+  font-family: futura;
+  font-size: 70px;
+  font-weight: lighter;
+  color: rgb(33, 173, 193);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.textWhatSearch{
+  font-family: futura;
+  font-size: 70px;
+  font-weight: lighter;
+  color: rgb(33, 173, 193);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+//splash page//
+#startnow {
+  background-image: url('assets/BB_logo_blue.jpg');
+  background-size: cover;
+  outline: 0;
+  height: 250px;
+  width: 250px;
+  font-size: 20px;
+  padding: 8px;
+  opacity: 0.9;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  margin-top: 60%;
+  }
+
+.container-footer{
+  display:flex;
+  justify-content: center;
+  font-family: futura;
+}
+
+.container-footer a {
+  margin: 2px 12px 12px 12px;
+  text-decoration: none;
+  color: white;
+}
+
+.container-footer p {
+margin-left: 5px;
+}
+
+
+button {
+   border: 2px solid rgb(33, 173, 193);
+   background: #ffffff;
+   padding: 18.5px 37px;
+   -webkit-border-radius: 39px;
+   -moz-border-radius: 39px;
+   border-radius: 39px;
+
+}
+
+//faded image of band
+.fadeImage {
+  display: block;
+  background: url('assets/jimmyfade.jpg') no-repeat;
+  width: 100%;
+  height: 800px;
+  margin-top: 50px;
+  border-top: 5px solid pink;
+  border-bottom: 5px solid pink;
+}
+
+.text {
+  margin-top: 35%;
+}
+
+.fadeImage h1{
+  color: white;
+  font-size: 80px;
+  font-family: futura;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+  }
+
+.fadeImage h2{
+  color: white;
+  font-size: 80px;
+  font-family: futura;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+}
+
+.fadeImage h3{
+  color: white;
+  font-size: 80px;
+  font-family: futura;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+}
+
+.fadeImage h4{
+  color: white;
+  font-size: 80px;
+  font-family: futura;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+}
+
+.fadeImage h5{
+  color: white;
+  font-size: 80px;
+  font-family: futura;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+}
+
+
+//Info boxes//
+.infoBoxes {
+  display:flex;
+  justify-content: center;
+  margin-top: 260px;
+  margin-bottom: 70px;
+  width: 100%;
+  height: 2100px;
+  font-family: futura;
+
+}
+
+.book {
+  width:500px;
+  height:2000px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+//Contact/FAQ page//
+
+.cirlceContainer{
+  border: 2px solid black;
+  height: 500px;
+  width: 100%;
+}
+
+.contactBox {
+  height: 1500px;
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 25%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  margin-top: 35%;
+  color: white;
+  font-family: futura;
+  text-align: center;
+  font-size: 35px;
+  background-color: rgb(33, 173, 193);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.contact:hover {
+  background-color: rgb(126, 194, 209);
+}
+
+.contact a p{
+  margin-top: 36%;
+  color: white;
+}
+
+
+.faq {
+  color: white;
+  font-family: futura;
+  text-align: center;
+  margin-top: 40%;
+  font-size: 35px;
+  background-color: rgb(33, 173, 193);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%
+}
+
+.faq:hover {
+  background-color: rgb(126, 194, 209);
+}
+
+.faq a p{
+  margin-top: 36%;
+  color: white;
+
+}
+
+.team {
+  color: white;
+  font-family: futura;
+  text-align: center;
+  margin-top: 40%;
+  font-size: 35px;
+  background-color: rgb(33, 173, 193);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%
+}
+
+.team:hover {
+  background-color: rgb(126, 194, 209);
+}
+
+.team a p{
+  margin-top: 36%;
+  color: white;
+}
+
+//ADD CHOICE PAGE
+
+.textWhat{
+  font-family: futura;
+  font-size: 31px;
+  color: rgb(33, 173, 193);
+  margin-bottom: 20px;
+}
+
+.form-control{
+  border: 2px solid pink;
+  height: 60px;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+//ADD FORM PAGE
+
+.formAddPage{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  font-size:30px;
+  font-family: futura;
+  justify-content: space-between;
+}
+
+.formAddBoxes{
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: rgb(33, 173, 193);
+  margin-left: 25px;
+}
+
+
+#name{
+  border: 2px solid pink;
+  height: 10%;
+  border-radius: 3%;
+  outline: none;
+}
+
+#address{
+  border: 2px solid pink;
+  height: 10%;
+  border-radius: 3%;
+  outline: none;
+}
+
+#state{
+  border: 2px solid pink;
+  height: 10%;
+  border-radius: 3%;
+  outline: none;
+}
+
+#city{
+  border: 2px solid pink;
+  height: 10%;
+  border-radius: 3%;
+  outline: none;
+}
+
+#zipcode{
+  border: 2px solid pink;
+  height: 10%;
+  border-radius: 3%;
+  outline: none;
+}
+
+#contactName{
+  border: 2px solid pink;
+  height: 10%;
+  border-radius: 3%;
+  outline: none;
+}
+
+#email{
+  border: 2px solid pink;
+  height: 10%;
+  border-radius: 3%;
+  outline: none;
+}
+
+#description{
+  border: 2px solid pink;
+  height: 150px;
+  border-radius: 3%;
+  margin-bottom: 40px;
+  outline: none;
+}
+
+.text-center{
+  margin-bottom: 50px;
+}
+
+.text-center a{
+  color: rgb(33, 173, 193);
+}
