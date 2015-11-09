@@ -3,7 +3,7 @@ import Parse from 'parse';
 import Backbone from 'backbone';
 
 
-export default class EmptyField extends React.Component {
+export default class faqContact extends React.Component {
    handleSubmit = () => {
      Backbone.history.navigate( `/faq`, true);
    }
@@ -22,3 +22,5 @@ export default class EmptyField extends React.Component {
 
   }
 }
+
+export default faqContact;

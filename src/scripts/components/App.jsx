@@ -7,6 +7,7 @@ import AboutBB from './AboutBB';
 import DataStore from './dataStore';
 import FaqContact from './faqContact';
 import AddContent from './addContent';
+import ChooseParam from './chooseParam'
 import Icon from './Icon';
 
 
@@ -36,7 +37,6 @@ class App extends React.Component {
   onRoute = () => {
     $('.navbar-toggle').click();
     this.setState({
-      currentUser: Parse.User.current(),
       currentRoute: this.props.router.current
     });
   }
@@ -44,24 +44,29 @@ class App extends React.Component {
   render() {
     let currentView;
 
+    console.log(this.state);
+
     switch (this.state.currentRoute) {
       case 'splash' :
-        currentView = <splash />;
+        currentView = <Splash />;
         break;
       case 'searchContent' :
-        currentView = <serachContent />;
+        currentView = <SerachContent />;
         break;
       case 'aboutBB' :
-        currentView = <aboutBB />;
+        currentView = <AboutBB />;
         break;
       case 'dataStore' :
-        currentView = <dataStore />;
+        currentView = <DataStore />;
         break;
       case 'faqContact' :
-        currentView = <faqContact />;
+        currentView = <FaqContact />;
         break;
       case 'addContent' :
-        currentView = <addContent />;
+        currentView = <AddContent />;
+        break;
+      case 'chooseParam' :
+        currentView = <ChooseParam />;
         break;
     default :
       currentView = <Splash/>;

@@ -4,28 +4,36 @@ class Router extends Backbone.Router {
 
   get routes() {
     return {
-      '' : 'splash',
+      ''       : 'splash',
+      'add'    : 'addContent',
       'search' : 'searchContent',
-      'data': 'dataStore',
-      'about':'AboutBB',
-      'faq':'faqContact',
+      'data'   : 'dataStore',
+      'about'  : 'aboutBB',
+      'faq'    : 'faqContact',
+      'choose' : 'chooseParam'
     }
   }
 
-  Splash() {
-    this.current = 'Splash';
+  splash() {
+    this.current = 'splash';
+  }
+  addContent() {
+    this.current = 'addContent';
   }
   serachContent() {
     this.current = 'serachContent';
   }
   dataStore() {
-    this.current = 'DataStore';
+    this.current = 'dataStore';
   }
   aboutBB() {
     this.current = 'aboutBB';
   }
   faqContact() {
     this.current = 'faqContact';
+  }
+  chooseParam(){
+    this.current = 'chooseParam';
   }
   initialize() {
     Backbone.history.start();

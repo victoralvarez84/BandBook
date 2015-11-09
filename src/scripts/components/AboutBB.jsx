@@ -8,7 +8,7 @@ class AboutBB extends React.Component {
 
   constructor(props) {
     super(props);
-    this.query = new Parse.Query(Game);
+    this.query = new Parse.Query(BandBook);
     this.state = {
     bandBook: []
     };
@@ -33,7 +33,7 @@ class AboutBB extends React.Component {
       .find({
         success: (results) => {
           this.setState({
-            backBone: results
+            bandBook: results
           });
         }
       });
@@ -41,9 +41,9 @@ class AboutBB extends React.Component {
 
   render () {
     let details = this.state
-      .games
-      .map((game, i) => {
-        return <SearchDetail game={game} key={i}/>;
+      .bandBook
+      .map((band, i) => {
+        return <SearchDetail game={band} key={i}/>;
       });
 
     return (
