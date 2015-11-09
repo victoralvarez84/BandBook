@@ -24,10 +24,50 @@ class NavigationItem extends React.Component {
   }
 }
 
+class SessionNavigation extends React.Component {
 
+  handleSignOut = () => {
+    Parse.User.logOut();
+    Backbone.history.navigate('/', true);
+  }
+
+  handleSignIn = (event) => {
+    event.preventDefault();
+    Parse.User.logIn(this.refs.username.value, this.refs.password.value, {
+      success: function(user) {
+        Backbone.history.navigate('/info', true);
+      },
+      error: function(user, error) {
+        alert("Error: " + error.code + " " + error.message);
+      }
+    });
+  }
+
+  render() {
+    if (this.props.user) {
+      return (
+        <ul className = "nav navbar-nav navbar-right">
+          <li>
+            <a href="#" onClick={this.handleSignOut} >
+              <Icon type="user"/>
+              {' '}
+              Sign Out
+            </a>
+          </li>
+        </ul>
+      )
+    } else {
+      return (
+        <div>
+
+
+        </div>
+      );
+    }
+  }
+}
 
 class Navigation extends React.Component {
-
   render() {
     return (
       <nav className="navbar navbar-inverse navbar-fixed-top">
@@ -43,12 +83,14 @@ class Navigation extends React.Component {
           </div>
           <div className="collapse navbar-collapse" id="navbar">
             <ul className="nav navbar-nav">
-              <NavigationItem current={this.props.current === '#'}  label="HOME" to="#"/>
-              <NavigationItem current={this.props.current === 'info'}  label="ADD" to="#/new"/>
-              <NavigationItem current={this.props.current === 'about'} label="ABOUT" to="#/results"/>
-              <NavigationItem current={this.props.current === 'faqs'} label="SUCK ME  & FUCK ME" to="#/empty"/>
-          </ul>
+              <NavigationItem current={this.props.current === '#'} label="HOME" to="#"/>
+              <NavigationItem current={this.props.current === 'add'}  label="ADD" to="#/add"/>
+              <NavigationItem current={this.props.current === 'about'}  label="ABOUT" to="#/about"/>
+              <NavigationItem current={this.props.current === 'faq'}  label="FAQ" to="#/faq"/>
 
+
+            </ul>
+            <SessionNavigation user={this.props.currentUser}/>
           </div>
         </div>
       </nav >);

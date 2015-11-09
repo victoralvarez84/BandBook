@@ -5,7 +5,7 @@ class Splash extends React.Component {
 
   handleSubmit = () => {
     Backbone.history
-      .navigate(`/info`, true);
+      .navigate(`/splash`, true);
   }
 
   componentDidMount() {

@@ -1,7 +1,7 @@
 @import "../../node_modules/bootstrap/less/bootstrap";
 @fa-font-path: "fonts";
 @import "../../node_modules/font-awesome/less/font-awesome";
-@footer-height: 30px;
+@footer-height: 60px;
 
 
 
@@ -18,20 +18,28 @@ body {
 
 .navbar{
   background-color: rgb(41, 40, 40);
+  opacity: 0.8;
+  font-family: futura;
+  font-size: 25px;
   }
 
 html {
   position: relative;
   min-height: 100%;
 }
+
 .footer {
   position: absolute;
+  left: 0;
   bottom: 0;
+  width: 100%;
+  overflow:hidden;
   width: 100%;
   height: @footer-height;
   line-height: @footer-height;
   background-color: rgb(33, 173, 193);
   color: white;
+  opacity: 0.8;
   p {
     margin: 0 auto;
   }
@@ -103,7 +111,7 @@ html {
   color: rgb(33, 173, 193);
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -129,12 +137,12 @@ html {
 
 .container-footer{
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
   font-family: futura;
 }
 
 .container-footer a {
-  margin: 2px 12px 12px 12px;
+  margin: 4px 12px 12px 12px;
   text-decoration: none;
   color: white;
 }
@@ -324,9 +332,17 @@ button {
 }
 
 .form-control{
-  border: 2px solid pink;
-  height: 60px;
+  border: 2px solid rgb(33, 173, 193);
+  height: 40px;
+  font-size: 25px;
+  font-family: futura;
   outline: none;
+  margin-bottom: 60px;
+}
+
+.choices{
+  color: red;
+  border: 2px solid red;
 }
 
 

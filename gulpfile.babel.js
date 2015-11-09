@@ -20,7 +20,9 @@ gulp.task('html', () => {
 gulp.task('json', () => {
   gulp.src('src/**/*.json')
     .pipe(gulp.dest('dist'))
-    .pipe(sync.reload({stream: true}));
+    .pipe(sync.reload({
+      stream: true
+    }));
 });
 
 gulp.task('script', () => {
@@ -43,7 +45,7 @@ gulp.task('script', () => {
 });
 
 gulp.task('styles', ['fonts'], () => {
-  gulp.src('src/styles/**/*.less')
+  gulp.src('src/styles/**/*.{css,less}')
     .pipe(less()
       .on('error', (error) => {
         gutil.log(gutil.colors.red('Error: ' + error.message));
@@ -61,7 +63,12 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('dist/fonts/'));
 });
 
-gulp.task('build', ['html', 'script', 'styles', 'json']);
+gulp.task('assets', () => {
+  gulp.src('src/styles/assets/*')
+  .pipe(gulp.dest('dist/assets'));
+});
+
+gulp.task('build', ['html', 'script', 'styles', 'json', 'assets']);
 
 gulp.task("deploy", ["build"], () => {
   ghPages.publish("dist");
@@ -74,8 +81,9 @@ gulp.task('serve', ['build'], () => {
 
   gulp.watch('src/**/*.html', ['html']);
   gulp.watch('src/**/*.json', ['json']);
-  gulp.watch('src/**/*.less', ['styles']);
-  gulp.watch('src/**/*.{js,jsx}', ['script'])
+  gulp.watch('src/**/*.{css,less}', ['styles']);
+  gulp.watch('src/**/*.{js,jsx}', ['script']);
+  gulp.watch('src/styles/assets/**/*', ['assets']);
 });
 
 gulp.task('default', ['serve']);

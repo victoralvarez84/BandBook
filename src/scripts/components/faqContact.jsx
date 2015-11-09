@@ -1,7 +1,7 @@
 import React from 'react';
 import Parse from 'parse';
 import Backbone from 'backbone';
-import chooseParam from 'chooseParam';
+
 
 export default class EmptyField extends React.Component {
    handleSubmit = () => {

@@ -10,10 +10,7 @@ class AboutBB extends React.Component {
     super(props);
     this.query = new Parse.Query(Game);
     this.state = {
-      players: Number(this.params('players')),
-      duration: Number(this.params('duration')),
-      difficulty: this.params('difficulty'),
-      games: []
+    bandBook: []
     };
   }
 
@@ -98,7 +95,7 @@ class AboutBB extends React.Component {
 
                </div>
 
-
+s
 
              </div>
             </div>

@@ -1,50 +1,29 @@
 import React from 'react';
 import Parse from 'parse';
 import Backbone from 'backbone';
-import Icon from './Icon';
-import BandBook from '../bandBook';
-import faqContact from './faqContact';
 
-class addContent extends React.Component {
-
+export default class addContent extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
-    // We could validate the data
-    // ON ANOTHER DAY
-    // Tell parse to construct a new game with the data
-    if (document.getElementsByName('.form-control')[0], this.refs.title.value == '' || this.refs.minPlayers.value == '' || this.refs.maxPlayers.value == '' || this.refs.durationHours.value == '' || this.refs.durationMinutes.value == '') {
-      console.log('empty');
-      Backbone.history
-        .navigate(`/empty`, true);
-    } else {
 
-      let game = new Game();
+    var user = new Parse.User();
+    user.set("username", this.refs.username.value);
+    user.set("password", this.refs.password.value);
+    user.set("email", this.refs.email.value);
 
-      let duration = Number(this.refs.durationHours.value * 60) + Number(this.refs.durationMinutes.value);
+    user.signUp(null, {
+      success: function(user) {
+        Backbone.history.navigate(`/info`, true);
+      },
+      error: function(user, error) {
+        alert("Error: " + error.code + " " + error.message);
+      }
+    });
 
-      game.set('title', this.refs.title.value);
-      game.set('description', Text(this.refs.gameDescription.value));
-      game.set('shortSummary', Text(this.refs.shortSummary.value));
-      game.set('minPlayers', Number(this.refs.minPlayers.value));
-      game.set('maxPlayers', Number(this.refs.maxPlayers.value));
-      game.set('duration', duration);
-      game.set('difficulty', event.target.elements.difficulty.value);
-      game.set('rating', Number(this.state.rating));
 
-      game.set('images', []); // For NOW. TODO: use a text field, split on new lines.
-
-      console.log(game.attributes);
-      // save it
-      game.save()
-        .then((game) => {
-          // redirect to game detail page.
-          Backbone.history
-            .navigate(`/game/${game.id}`, true);
-        });
-    }
   }
 
-  render() {
+  render () {
     return (
       <div id="gameForm">
         <div className="container new-game">
@@ -79,9 +58,6 @@ class addContent extends React.Component {
             </form>
           </div>
         </div>
-
-
-    )
-  };
+    );
+  }
 }
-export default addContent;

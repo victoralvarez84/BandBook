@@ -4,27 +4,22 @@ class Router extends Backbone.Router {
 
   get routes() {
     return {
-      '' : 'index',
+      '' : 'splash',
       'search' : 'searchContent',
       'data': 'dataStore',
-      'choose':'chooseParam',
-      'about':'aboutBB',
+      'about':'AboutBB',
       'faq':'faqContact',
-      'add':'addContent'
     }
   }
 
-  index() {
-    this.current = 'index';
+  Splash() {
+    this.current = 'Splash';
   }
-  searchContent() {
+  serachContent() {
     this.current = 'serachContent';
   }
-  chooseParam() {
-    this.current = 'chooseParam';
-  }
   dataStore() {
-    this.current = 'dataStore';
+    this.current = 'DataStore';
   }
   aboutBB() {
     this.current = 'aboutBB';
@@ -32,8 +27,8 @@ class Router extends Backbone.Router {
   faqContact() {
     this.current = 'faqContact';
   }
-  addContent() {
-    this.current = 'addContent';
+  initialize() {
+    Backbone.history.start();
   }
 }
 

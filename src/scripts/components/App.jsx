@@ -2,13 +2,13 @@ import React from 'react';
 import Parse from 'parse';
 import Navigation from './Navigation';
 import Splash from './Splash';
-import chooseParam from './chooseParam';
-import searchContent from './searchContent';
-import aboutBB from './aboutBB';
-import dataStore from './dataStore';
-import faqContact from './faqContact';
-import addContent from './addContent';
+import SearchContent from './searchContent';
+import AboutBB from './AboutBB';
+import DataStore from './dataStore';
+import FaqContact from './faqContact';
+import AddContent from './addContent';
 import Icon from './Icon';
+
 
 
 class App extends React.Component {
@@ -45,8 +45,8 @@ class App extends React.Component {
     let currentView;
 
     switch (this.state.currentRoute) {
-      case 'chooseParam' :
-        currentView = <chooseParam />;
+      case 'splash' :
+        currentView = <splash />;
         break;
       case 'searchContent' :
         currentView = <serachContent />;
@@ -55,7 +55,7 @@ class App extends React.Component {
         currentView = <aboutBB />;
         break;
       case 'dataStore' :
-        currentView = <dataStore game_id={this.props.router.game_id} />;
+        currentView = <dataStore />;
         break;
       case 'faqContact' :
         currentView = <faqContact />;
@@ -63,7 +63,7 @@ class App extends React.Component {
       case 'addContent' :
         currentView = <addContent />;
         break;
-     default :
+    default :
       currentView = <Splash/>;
     }
 
@@ -73,10 +73,10 @@ class App extends React.Component {
         {currentView}
         <footer className="footer">
         <div className="container-footer">
-        <a href="#"><div className="fa fa-instagram fa-2x"></div></a>
-        <a href="#"><div className="fa fa-twitter-square fa-2x"></div></a>
-        <a href="#"><div className="fa fa-facebook-square fa-2x"></div></a>
-        <a href="#"><div className="fa fa-github-square fa-2x"></div></a>
+        <a href="https://instagram.com/livingdecent/"><div className="fa fa-instagram fa-4x"></div></a>
+        <a href="https://twitter.com/VicAlvarez84"><div className="fa fa-twitter-square fa-4x"></div></a>
+        <a href="https://www.facebook.com/Livingdecent/"><div className="fa fa-facebook-square fa-4x"></div></a>
+        <a href="https://www.linkedin.com/pub/victor-alvarez/2a/814/587"><div className="fa fa-github-square fa-4x"></div></a>
         </div>
         </footer>
       </div>
