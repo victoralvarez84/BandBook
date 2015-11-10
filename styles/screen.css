@@ -8898,7 +8898,7 @@ html {
   outline: none;
 }
 #startnow {
-  background-image: url('assets/BB_logo_blue.jpg');
+  background-image: url('../assets/BB_logo_blue.jpg');
   background-size: cover;
   outline: 0;
   height: 250px;
