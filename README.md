@@ -1,2 +1,0 @@
-# DemoDay
-Final Project Repo
