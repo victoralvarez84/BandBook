@@ -83,7 +83,7 @@ class Navigation extends React.Component {
           </div>
           <div className="collapse navbar-collapse" id="navbar">
             <ul className="nav navbar-nav">
-              <NavigationItem current={this.props.current === '#'} label="HOME" to="#"/>
+              <NavigationItem current={this.props.current === 'serach'} label="SEARCH" to="#/search"/>
               <NavigationItem current={this.props.current === 'add'}  label="ADD" to="#/add"/>
               <NavigationItem current={this.props.current === 'about'}  label="ABOUT" to="#/about"/>
               <NavigationItem current={this.props.current === 'faq'}  label="FAQ" to="#/faq"/>

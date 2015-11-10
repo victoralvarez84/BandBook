@@ -7,8 +7,8 @@ import AboutBB from './AboutBB';
 import DataStore from './dataStore';
 import FaqContact from './faqContact';
 import AddContent from './addContent';
-import ChooseParam from './chooseParam'
 import Icon from './Icon';
+import AddForm from './addForm';
 
 
 
@@ -51,7 +51,7 @@ class App extends React.Component {
         currentView = <Splash />;
         break;
       case 'searchContent' :
-        currentView = <SerachContent />;
+        currentView = <SearchContent />;
         break;
       case 'aboutBB' :
         currentView = <AboutBB />;
@@ -65,10 +65,10 @@ class App extends React.Component {
       case 'addContent' :
         currentView = <AddContent />;
         break;
-      case 'chooseParam' :
-        currentView = <ChooseParam />;
-        break;
-    default :
+      case 'addForm' :
+          currentView = <AddForm />;
+          break;
+      default :
       currentView = <Splash/>;
     }
 
@@ -81,7 +81,7 @@ class App extends React.Component {
         <a href="https://instagram.com/livingdecent/"><div className="fa fa-instagram fa-4x"></div></a>
         <a href="https://twitter.com/VicAlvarez84"><div className="fa fa-twitter-square fa-4x"></div></a>
         <a href="https://www.facebook.com/Livingdecent/"><div className="fa fa-facebook-square fa-4x"></div></a>
-        <a href="https://www.linkedin.com/pub/victor-alvarez/2a/814/587"><div className="fa fa-github-square fa-4x"></div></a>
+        <a href="https://www.github.com/victoralvarez84"><div className="fa fa-github-square fa-4x"></div></a>
         </div>
         </footer>
       </div>

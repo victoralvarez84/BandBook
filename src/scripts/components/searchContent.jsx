@@ -15,12 +15,8 @@ class searchContent extends React.Component {
 
     render() {
       return (
-        <div className='container info-collect'>
-          <div className="row">
-            <div className='content'>
+          <div className='infoCollect'>
                 <h2 className="text-center"><a href="#"><img src="assets/BB_logo_blue.jpg"/></a></h2>
-                  <br></br>
-                  <br></br>
                 <p className="textWhereSearch">Where</p>
                 <select className="form-control" ref="players">
                   <option>Anywhere!</option>
@@ -40,7 +36,6 @@ class searchContent extends React.Component {
                 <br></br>
                 <p className="textWhatSearch">What</p>
                 <select className="form-control" ref="difficulty">
-                    <div className="choices">
                     <option>Anything!</option>
                     <option>Promoters/Venues</option>
                     <option>Bands</option>
@@ -49,15 +44,11 @@ class searchContent extends React.Component {
                     <option>Lodging</option>
                     <option>Vans for Sale</option>
                     <option>Tips</option>
-                    </div>
-                  </select>
-                </div>
-                <br></br>
-                <br></br>
-                  <p className="text-center">
-                    <a href="#/game/:id"><button type="button" class="btn btn-secondary">Search!</button></a>
-                    </p>
-              </div>
+               </select>
+               <div className="continueBox">
+               <a href="#/form"><button type="button" className="btn">Continue</button></a>
+               </div>
+
             </div>
 
 

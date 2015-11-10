@@ -25,8 +25,8 @@ export default class addContent extends React.Component {
 
   render () {
     return (
-      <div id="gameForm">
-        <div className="container new-game">
+      <div id="addContent">
+        <div className="addContent">
           <div className="row row-centered">
               <div className="col-xs-6 col-centered">
                 <h2 className="text-center"></h2>
@@ -34,11 +34,7 @@ export default class addContent extends React.Component {
             </div>
             <h2 className="text-center"><a href="#"><img src="assets/BB_logo_blue.jpg"/></a></h2>
             <form onSubmit={this.handleSubmit} role="form">
-
-              <br></br>
-              <br></br>
-
-              <p className="textWhat">What do you want to add?</p>
+            <p className="addParam">ADD TO BB!</p>
               <select className="form-control" ref="difficulty">
                   <option>Add!</option>
                   <option>Promoters/Venues</option>
@@ -49,12 +45,9 @@ export default class addContent extends React.Component {
                   <option>Vans for Sale</option>
                   <option>Tips</option>
                 </select>
-
-              <br></br>
-              <br></br>
-              <p className="text-center">
-                <a href="#/register"><button type="button" class="btn btn-secondary">Continue!</button></a>
-              </p>
+                <div className="continueBox">
+                <a href="#/form"><button type="button" className="btn">Continue</button></a>
+                </div>
             </form>
           </div>
         </div>

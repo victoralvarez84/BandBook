@@ -47,60 +47,21 @@ class AboutBB extends React.Component {
       });
 
     return (
-      <div className='container info-collect'>
-        <div className="row">
-          <h2 className="text-center"><a href="#"><img src="assets/BB_logo_blue.jpg"/></a></h2>
-            <div className='fadeImage'>
-              <div className='text'>
-              <h5>WHAT</h5>
-              <h4>IF</h4>
-              <h3>BOOKING</h3>
-              <h2>WAS</h2>
-              <h1>EASY?</h1>
-              </div>
-             </div>
-            <div className="infoBoxes">
-
-                <div className='book'>BOOK A TOUR
-                 <br></br>
-                 <br></br>
-                 <i className="fa fa-bus fa-3x"></i>
-                 <br></br>
-                 <br></br>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-               <br></br>
-               <br></br>
-               <br></br>
-               <p>ADD YOURSELF!</p>
-               <br></br>
-               <i className="fa fa-plus-square fa-3x"></i>
-               <br></br>
-               <br></br>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-               <br></br>
-               <br></br>
-               <br></br>
-               <p>CONNECT WITH OTHERS!</p>
-               <br></br>
-               <i className="fa fa-users fa-3x"></i>
-               <br></br>
-               <br></br>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-               </div>
-
-s
-
-             </div>
-            </div>
-           </div>
-        );
+      <div className="infoBoxes">
+        <h2 className="text-center"><a href="#"><img src="assets/BB_logo_blue.jpg"/></a></h2>
+          <div className='bookTour'><h1>BOOK A TOUR</h1>
+              <i className="fa fa-bus fa-3x"></i>
+          </div>
+          <div className='addYourself'>
+              <h1>ADD YOURSELF!</h1>
+              <i className="fa fa-plus-square fa-3x"></i>
+          </div>
+          <div className='leaveRating'>
+            <h1>LEAVE A RATING!</h1>
+            <i className="fa fa-star fa-3x"></i>
+          </div>
+        </div>
+      );
   }
 
   params(name) {

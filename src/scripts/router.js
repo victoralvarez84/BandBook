@@ -10,8 +10,8 @@ class Router extends Backbone.Router {
       'data'   : 'dataStore',
       'about'  : 'aboutBB',
       'faq'    : 'faqContact',
-      'choose' : 'chooseParam'
-    }
+      'form'   : 'addForm'
+      }
   }
 
   splash() {
@@ -20,8 +20,8 @@ class Router extends Backbone.Router {
   addContent() {
     this.current = 'addContent';
   }
-  serachContent() {
-    this.current = 'serachContent';
+  searchContent() {
+    this.current = 'searchContent';
   }
   dataStore() {
     this.current = 'dataStore';
@@ -32,8 +32,8 @@ class Router extends Backbone.Router {
   faqContact() {
     this.current = 'faqContact';
   }
-  chooseParam(){
-    this.current = 'chooseParam';
+  addForm() {
+    this.current = 'addForm';
   }
   initialize() {
     Backbone.history.start();
