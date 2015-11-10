@@ -9029,7 +9029,7 @@ button {
   justify-content: center;
   background-color: white;
   color: #21adc1;
-  font-size: 70px;
+  font-size: 60px;
   height: 100px;
   width: 100%;
   font-family: futura;
@@ -9061,7 +9061,7 @@ button {
   width: 100%;
   background-color: white;
   border: 2px solid white;
-  height: 1800px;
+  height: 1900px;
 }
 .inputBox {
   display: flex;
