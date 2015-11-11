@@ -8936,7 +8936,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 1300px;
+  height: 2200px;
   font-family: futura;
   background-color: white;
 }
@@ -8947,9 +8947,14 @@ button {
   flex-direction: column;
   justify-content: center;
   color: #21adc1;
+  margin-top: 20px;
   margin-bottom: 90px;
   opacity: 0.8;
   font-size: 50px;
+}
+.bookTour i {
+  color: pink;
+  margin-bottom: 30px;
 }
 .addYourself {
   width: 100%;
@@ -8962,6 +8967,10 @@ button {
   opacity: 0.8;
   font-size: 50px;
 }
+.addYourself i {
+  color: pink;
+  margin-bottom: 30px;
+}
 .leaveRating {
   width: 100%;
   text-align: center;
@@ -8972,6 +8981,10 @@ button {
   margin-bottom: 90px;
   opacity: 0.8;
   font-size: 50px;
+}
+.leaveRating i {
+  color: pink;
+  margin-bottom: 30px;
 }
 .contactBox {
   display: flex;
